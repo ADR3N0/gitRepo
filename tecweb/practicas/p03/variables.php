@@ -77,5 +77,22 @@ echo '"c" en el ámbito global: ' . $GLOBALS['c'] . "</br>";
 unset($a,$z,$b,$c);
 ?>
 
+<h3>5. Dar el valor de las variables $a, $b, $c al final del siguiente script:</h3>
+<?php
+$a = "7 personas";
+echo 'Asignación: $a = "7 personas";',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>a = </b>",$a,"</br></br>";
+$b = (integer) $a;
+echo 'Asignación: $b = (integer) $a;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>b = </b>",$b,"</br></br>";
+$a = "9E3";
+echo 'Asignación: $a = "9E3";',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>a = </b>",$a,"</br></br>";
+$c = (double) $a;
+echo 'Asignación: $c = (double) $a;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>c = </b>",$c,"</br></br>";
+unset($a,$b,$c);
+?>
+
 </body>
 </html>
