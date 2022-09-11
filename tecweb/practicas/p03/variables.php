@@ -26,8 +26,19 @@ el simbolo de dolar <b>$</b>.</li>
 <li>El formato <b>$house*5</b> NO funciona porque el simbolo <b>*</b> no es parte del 
 codigo ASCII extendido (del 127 al 255).</li></ul>
 <p><b>Nota: </b>Iniciar el nombre de una variable con un número NO es valido.</p>
-<?php
 
+<h3>2. Proporcionar los valores de $a, $b, $c como sigue:</h3>
+<?php
+$a = "ManejadorSQL"; $b = 'MySQL'; $c = &$a;
+echo "<b>a) Contenido en las variables:</b><ul>$a</br>$b</br>$c</ul>";
+echo "<b>b) Se realiza la nueva asignación en el código PHP.</b></br></br>";
+$a = "PHP server";$b = &$a;
+echo "<b>c) Contenido en las variables despues del cambio:</b><ul>$a</br>$b</br>$c</ul>";
+echo "<b>d) Explicación:</b><ul><span>A la variable 'a' se le asigna la cadena 'PHP server',
+ las variables 'b' y 'c' hacen referencia al valor contenido en la variable 'a' lo cual 
+ ocaciona que todas las variables muestren el mismo valor.</span></ul>";
+unset($a,$b,$c);
 ?>
+
 </body>
 </html>
