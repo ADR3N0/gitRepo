@@ -116,5 +116,13 @@ echo 'La valor booleano de lavariable $c es: '.(boolval($x[2]) ? 'true' : 'false
 echo 'La valor booleano de lavariable $e es: '.(boolval($x[4]) ? 'true' : 'false')."</br>";
 ?>
 
+<h3>7. Usando la variable predefinida $_SERVER, determina lo siguiente:</h3>
+<?php
+
+echo "<b>a) Version de Apache:   </b>",$_SERVER['SERVER_SOFTWARE'],"</br>";
+echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Version de PHP:   </b>".phpversion(),"</br></br>";
+echo "<b>b) Nombre del sistema operativo (servidor):   </b>".PHP_OS;
+echo "</br></br><b>c) Idioma del navegador (cliente):   </b>",$_SERVER['HTTP_ACCEPT_LANGUAGE'],"</br></br>";
+?>
 </body>
 </html>
