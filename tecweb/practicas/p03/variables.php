@@ -94,5 +94,27 @@ echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>c = </b>",$c,"</br></br>";
 unset($a,$b,$c);
 ?>
 
+<h3>6. Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas
+usando la función var_dump(datos).</br>
+Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
+en uno que se pueda mostrar con un echo:</h3>
+<?php
+$i = 0;
+$a = 0;$b = TRUE;$c = FALSE;$d = ($a OR $b);$e = ($a AND $c);$f = ($a XOR $b);
+$x = array($a,$b,$c,$d,$e,$f);
+echo "<b>Utilizando un array y un ciclo for:</b></br>";
+for ($i; $i <= 5; $i++) {
+    
+    if (is_bool($x[$i]) === true) {
+        var_dump($x[$i]);echo ' SÍ es un booleano',"</br>";
+    } else {
+        var_dump($x[$i]);echo ' NO es un booleano',"</br>";
+    }
+}
+echo "<b>Utilizando la función boolval():</b></br>";
+echo 'La valor booleano de lavariable $c es: '.(boolval($x[2]) ? 'true' : 'false')."</br>";
+echo 'La valor booleano de lavariable $e es: '.(boolval($x[4]) ? 'true' : 'false')."</br>";
+?>
+
 </body>
 </html>
