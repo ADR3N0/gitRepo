@@ -67,5 +67,15 @@ echo 'Asignación: $z[0] = "MySQL";',"</br>";
 echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>z = </b>"; print_r($z);echo "</br></br>";
 ?>
 
+<h3>4. Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+la matriz $GLOBALS o del modificador global de PHP.</h3>
+<?php
+echo '"a" en el ámbito global: ' . $GLOBALS['a'] . "</br>";
+echo '"z" en el ámbito global: ' . $GLOBALS['z'] . "</br>";
+echo '"b" en el ámbito global: ' . $GLOBALS['b'] . "</br>";
+echo '"c" en el ámbito global: ' . $GLOBALS['c'] . "</br>";
+unset($a,$z,$b,$c);
+?>
+
 </body>
 </html>
