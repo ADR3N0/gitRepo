@@ -30,14 +30,41 @@ codigo ASCII extendido (del 127 al 255).</li></ul>
 <h3>2. Proporcionar los valores de $a, $b, $c como sigue:</h3>
 <?php
 $a = "ManejadorSQL"; $b = 'MySQL'; $c = &$a;
-echo "<b>a) Contenido en las variables:</b><ul>$a</br>$b</br>$c</ul>";
+echo "<b>a) Contenido en las variables:</b><ul>a = $a</br>b = $b</br>c = $c</ul>";
 echo "<b>b) Se realiza la nueva asignación en el código PHP.</b></br></br>";
 $a = "PHP server";$b = &$a;
-echo "<b>c) Contenido en las variables despues del cambio:</b><ul>$a</br>$b</br>$c</ul>";
+echo "<b>c) Contenido en las variables despues del cambio:</b><ul>a = $a</br>b = $b</br>c = $c</ul>";
 echo "<b>d) Explicación:</b><ul><span>A la variable 'a' se le asigna la cadena 'PHP server',
- las variables 'b' y 'c' hacen referencia al valor contenido en la variable 'a' lo cual 
- ocaciona que todas las variables muestren el mismo valor.</span></ul>";
+las variables 'b' y 'c' hacen referencia al valor contenido en la variable 'a' lo cual 
+ocaciona que todas las variables muestren el mismo valor.</span></ul>";
 unset($a,$b,$c);
+?>
+
+<h3>3. Muestra el contenido de cada variable inmediatamente después de cada asignación,
+verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+arreglos):</h3>
+<?php
+$a = "PHP5";
+echo 'Asignación: $a = "PHP5";',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>a = </b>"; var_dump($a);echo "</br></br>";
+$z[] = &$a;
+echo 'Asignación: $z[] = &$a;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>z = </b>"; print_r($z);echo "</br></br>";
+$b = "5ta version de PHP";
+echo 'Asignación: $b = “5a version de PHP”;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>b = </b>"; var_dump($b);echo "</br></br>";
+$c = $b*10;
+echo 'Asignación: $c = $b*10;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>c = </b>"; var_dump($c);echo "</br></br>";
+$a .= $b;
+echo 'Asignación: $a .= $b;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>a = </b>"; var_dump($a);echo "</br></br>";
+$b *= $c;
+echo 'Asignación: $b *= $c;',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>b = </b>"; var_dump($b);echo "</br></br>";
+$z[0] = "MySQL";
+echo 'Asignación: $z[0] = "MySQL";',"</br>";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado: <b>z = </b>"; print_r($z);echo "</br></br>";
 ?>
 
 </body>
