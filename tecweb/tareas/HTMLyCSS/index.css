@@ -1,0 +1,39 @@
+#Menu {
+        text-align:center; padding: 0; position: relative; bottom: -11.3em;
+}
+
+#Menu ul {
+        display:inline-block;
+}
+
+#Menu li {
+        display: inline
+}
+
+#Menu li a {
+        text-align:center; font-family: Arial; font-size:20px;
+        text-decoration: none; float:left; padding: 10px;
+        background-color: #414146; color: #fff
+ }
+
+#Menu li a:hover {
+        background-color: #000000; margin-top:-2px;
+        padding-bottom:15px;
+        color: white;
+}
+
+#Producto {
+    position: fixed; left: 35%; top: 1%;
+    width: 108px; height: 180px;
+}
+
+#Descripcion {
+        text-align: center;
+        font-size: 10px; font-family: Lato;
+        position:absolute; top: 60%; left: 20%;
+}
+
+#Precio {
+        font-size: 10px; font-family: Lato;
+        position:absolute; top: 70%; left: 40%;
+}
