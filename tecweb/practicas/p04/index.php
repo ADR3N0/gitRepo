@@ -43,7 +43,10 @@
         <p>
             R: </br>
             <?php
-
+            
+            $ejercicio2 = matriz;
+            $ejercicio2($a,$b,$min,$max);
+ 
             ?>
         </p>
     </div>
