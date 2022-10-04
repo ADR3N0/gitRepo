@@ -120,7 +120,24 @@
         </p>
         <p>
             R:
-
+            <style>
+            fieldset {background-color: #eeeeee;}
+            legend {background-color: gray;color: white;padding: 5px 10px;}
+            input {margin: 5px;}
+            </style>
+            <form id="formulario1" action="./src/script1.php" method="post">
+            <strong>Registro disponible para mujeres de 18 a 35 años</strong>
+            <fieldset>
+                <legend>Información Personal</legend>
+                <ol>
+                <li><label>Sexo (Masculino / Femenino):</label> <input type="text" name="sexo"></li>
+                <li><label>Edad:</label> <input type="text" name="edad"></li>
+                </ol>
+            </fieldset>
+            <p>
+                <input type="submit" value="Finalizar Registro">
+            </p>
+            </form>
         </p>
     </div>
     <div>
