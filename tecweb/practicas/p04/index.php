@@ -90,7 +90,14 @@
         <p>
             R:
             <?php
-
+            $tabla = '<table border>';
+            foreach(codeAscii() as $key => $value){
+                $tabla .= '<tr>';
+                $tabla .= '<td>' . $key . ' => ' . $value . '</td>';
+                $tabla .= '</tr>';
+            }
+            $tabla .= '</table>';
+            echo $tabla;
             ?>
         </p>
     </div>
