@@ -24,7 +24,12 @@
         <p>
             R:
             <?php
-            
+            if (!empty($_GET['numero'])) {
+                $numero = $_GET['numero'];
+                echo multiplo5y7($numero);
+            } else {
+                echo 'No existen parametros en la URL';
+            }            
             ?>
         </p>
     </div>
